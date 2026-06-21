@@ -60,7 +60,7 @@ public class SecurityConfig {
                     new CorsConfiguration();
 
             configuration.setAllowedOrigins(
-                    List.of("http://localhost:5173")
+                    List.of("https://task-management-system-ten-cyan.vercel.app")
             );
 
             configuration.setAllowedMethods(
