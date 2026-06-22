@@ -22,13 +22,14 @@ public class Task {
     @NotBlank(message = "Title is required")
     private String title;
 
-    @NotBlank(message = "Description is required")
     private String description;
 
+    @NotBlank(message = "Priority is required")
     private String priority;
 
     private Boolean completed;
 
+    @NotBlank(message = "Due date is required")
     private LocalDate dueDate;
 
     private String category;
