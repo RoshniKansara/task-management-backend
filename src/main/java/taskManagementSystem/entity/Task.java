@@ -3,6 +3,8 @@ package taskManagementSystem.entity;
 import java.time.LocalDate;
 import jakarta.persistence.*;  //imports JPA annotations
 import lombok.*;
+import jakarta.validation.constraints.NotBlank;
+
 
 @Entity
 @Getter
@@ -17,8 +19,10 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Title is required")
     private String title;
 
+    @NotBlank(message = "Description is required")
     private String description;
 
     private String priority;
@@ -32,4 +36,10 @@ public class Task {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    
+
+
+
+
 }

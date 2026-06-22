@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/tasks")
@@ -27,7 +27,7 @@ public class TaskController {
     private TaskService taskservice;
 
     @PostMapping
-    public Task createTask(@RequestBody Task task) {
+    public Task createTask(@Valid @RequestBody Task task) {
         return taskservice.createTask(task);
     }
 
