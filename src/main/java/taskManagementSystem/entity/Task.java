@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import jakarta.persistence.*;  //imports JPA annotations
 import lombok.*;
 import jakarta.validation.constraints.NotBlank;
-
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Getter
@@ -29,7 +29,7 @@ public class Task {
 
     private Boolean completed;
 
-    @NotBlank(message = "Due date is required")
+    @NotNull(message = "Due date is required")
     private LocalDate dueDate;
 
     private String category;
